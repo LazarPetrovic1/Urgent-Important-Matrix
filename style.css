@@ -1,0 +1,130 @@
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html body div[name] {
+  width: 50%;
+  height: 50%;
+  position: absolute;
+}
+div[name="1"] {
+  top: 0;
+  left: 0;
+  background-color: red;
+  overflow: auto;
+}
+div[name="2"] {
+  top: 0;
+  right: 0;
+  background-color: green;
+  overflow: auto;
+}
+div[name="3"] {
+  bottom: 0;
+  left: 0;
+  background-color: lightgreen;
+  overflow: auto;
+}
+div[name="4"] {
+  bottom: 0;
+  right: 0;
+  background-color: lightblue;
+  overflow: auto;
+}
+input[type="text"] {
+  padding: 6px 7px;
+  margin-left: 2%;
+  color: white;
+  width: 70%;
+  background-color: black;
+}
+button {
+  padding: 6px 7px;
+  background-color: inherit;
+  cursor: pointer;
+  transition: .4s;
+}
+button:hover {
+  background-color: maroon;
+  color: ivory;
+}
+.ulList {
+  display: block;
+  margin: auto;
+  width: 80%;
+  font-size: 1.2em;
+  list-style-type: none;
+}
+.first {
+  margin-top: 10px;
+  padding: 5px 7px;
+  font-weight: bolder;
+  border: 4px groove firebrick;
+  font-size: 1.3em;
+  background-color: white;
+  color: red;
+  box-shadow: 5px 10px 15px black;
+}
+.second {
+  margin-top: 10px;
+  padding: 3px 5px;
+  border: 3px ridge navy;
+  font-size: 1.1em;
+  background-color: white;
+  color: green;
+  font-weight: bold;
+  box-shadow: 3px 6px 9px black;
+}
+.third {
+  margin-top: 10px;
+  padding: 3px 5px;
+  font-size: 1em;
+  font-weight: bold;
+}
+.fourth {
+  margin-top: 7px;
+  padding: 3px 5px;
+  font-size: 0.8em;
+}
+div[name="1"]::-webkit-scrollbar {
+  width: 7px;
+}
+div[name="1"]::-webkit-scrollbar-track {
+  background: black;
+}
+div[name="1"]::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(to bottom, #014274, #004593, #0047b1, #0044cc, #003ce4, #0032dc, #0027d4, #001bcc, #0016a7, #001184, #000b61, #000041);
+}
+div[name="2"]::-webkit-scrollbar {
+  width: 7px;
+}
+div[name="2"]::-webkit-scrollbar-track {
+  background: black;
+}
+div[name="2"]::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(to top, #ff0000, #ef0202, #df0304, #cf0505, #bf0606, #b30506, #a80506, #9c0406, #920305, #880204, #7e0102, #740000);
+}
+div[name="3"]::-webkit-scrollbar {
+  width: 7px;
+}
+div[name="3"]::-webkit-scrollbar-track {
+  background: black;
+}
+div[name="3"]::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(to top, #a305a3, #9a049a, #920392, #890389, #810281, #7b017b, #760174, #70006e, #6c0068, #670062, #63005c, #5e0056);
+}
+div[name="4"]::-webkit-scrollbar {
+  width: 7px;
+}
+div[name="4"]::-webkit-scrollbar-track {
+  background: black;
+}
+div[name="4"]::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(to top, #00d8b3, #00cdaf, #00c2ab, #00b8a6, #00ada0, #00a19b, #009694, #008a8d, #007b83, #006b77, #005c6b, #004e5e);
+}

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.24.0/babel.js"></script> <!-- React link 1 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.min.js"></script> <!-- React link 2 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.min.js"></script> <!-- React link 3 -->
+    <title>Urgent/important matrix</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      const root = document.getElementById('root');
+
+      class UrgentImportant extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = {
+            input: '',
+            list: []
+          };
+          this.handleChange = this.handleChange.bind(this);
+          this.handleClick = this.handleClick.bind(this);
+        }
+        handleChange(e) {
+          this.setState({
+            input: e.target.value
+          });
+        }
+        handleClick() {
+          const arr = [...this.state.list, this.state.input];
+          this.setState({
+            input: '',
+            list: arr
+          });
+        }
+        render() {
+          const adder = this.state.list.map((item) => <li className="first">{item}</li>)
+          return (
+            <div id="urgImp" name="1">
+              <div>
+                <input type="text"
+                value={this.state.input}
+                placeholder="Urgent and important"
+                onChange={this.handleChange} />
+                <button type="button" onClick={this.handleClick}>Add</button>
+              </div>
+              <ul className="ulList">
+              {adder}
+              </ul>
+            </div>
+          );
+        }
+      }
+
+      class UrgentNotImportant extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = {
+            input: '',
+            list: []
+          };
+          this.handleChange = this.handleChange.bind(this);
+          this.handleClick = this.handleClick.bind(this);
+        }
+        handleChange(e) {
+          this.setState({
+            input: e.target.value
+          });
+        }
+        handleClick() {
+          const arr = [...this.state.list, this.state.input];
+          this.setState({
+            input: '',
+            list: arr
+          });
+        }
+        render() {
+          const adder = this.state.list.map((item) => <li className="second">{item}</li>)
+          return (
+            <div id="urgNotImp" name="2">
+              <div>
+                <input type="text"
+                value={this.state.input}
+                placeholder="Urgent, but not important"
+                onChange={this.handleChange} />
+                <button type="button" onClick={this.handleClick}>Add</button>
+              </div>
+              <ul className="ulList">
+              {adder}
+              </ul>
+            </div>
+          );
+        }
+      }
+
+      class NotUrgentImportant extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = {
+            input: '',
+            list: []
+          };
+          this.handleChange = this.handleChange.bind(this);
+          this.handleClick = this.handleClick.bind(this);
+        }
+        handleChange(e) {
+          this.setState({
+            input: e.target.value
+          });
+        }
+        handleClick() {
+          const arr = [...this.state.list, this.state.input];
+          this.setState({
+            input: '',
+            list: arr
+          });
+        }
+        render() {
+          const adder = this.state.list.map((item) => <li className="third">{item}</li>)
+          return (
+            <div id="notUrgImp" name="3">
+              <div>
+                <input type="text"
+                value={this.state.input}
+                placeholder="Not urgent, but important"
+                onChange={this.handleChange} />
+                <button type="button" onClick={this.handleClick}>Add</button>
+              </div>
+              <ul className="ulList">
+              {adder}
+              </ul>
+            </div>
+          );
+        }
+      }
+
+      class NotUrgentNotImportant extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = {
+            input: '',
+            list: []
+          };
+          this.handleChange = this.handleChange.bind(this);
+          this.handleClick = this.handleClick.bind(this);
+        }
+        handleChange(e) {
+          this.setState({
+            input: e.target.value
+          });
+        }
+        handleClick() {
+          const arr = [...this.state.list, this.state.input];
+          this.setState({
+            input: '',
+            list: arr
+          });
+        }
+        render() {
+          const adder = this.state.list.map((item) => <li className="fourth">{item}</li>)
+          return (
+            <div id="notUrgNotImp" name="4">
+              <div>
+                <input type="text"
+                value={this.state.input}
+                placeholder="Neither urgent nor important"
+                onChange={this.handleChange} />
+                <button type="button" onClick={this.handleClick}>Add</button>
+              </div>
+              <ul className="ulList">
+              {adder}
+              </ul>
+            </div>
+          );
+        }
+      }
+
+      class Matrix extends React.Component {
+        constructor(props) {
+          super(props);
+        }
+        render() {
+          return(
+            <div>
+              <UrgentImportant />
+              <UrgentNotImportant />
+              <NotUrgentImportant />
+              <NotUrgentNotImportant />
+            </div>
+          );
+        }
+      }
+
+      ReactDOM.render(<Matrix />, root)
+    </script>
+  </body>
+</html>
